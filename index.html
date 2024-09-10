@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panlidrome words. </title>
+    <style>
+        body{background-color: rgb(257, 245, 123, 23);}
+        .word{margin-left: 500px; margin-top: 200px;}
+        .word button{padding: 10px; background-color: blanchedalmond; border-radius: 10px;}
+        .word input{padding: 10px;border-radius: 10px;color: red; background-color: blanchedalmond;}
+    </style>
+</head>
+<body>
+    <div class="word"> 
+        <h1>Check for Panlidrome word. </h1>
+        <input type="text" placeholder="Enter a Panlidrome word" id="Input" required autofocus>
+        <button onclick="checkPanlidrome()">Get Start</button>
+        <div id="display"></div> 
+    </div>
+    <script>
+        function checkPanlidrome(){
+            var word = Input.value; 
+            var reversedWord = word.split('').reverse().join('');
+
+            if (word === reversedWord && word !== ''){
+                display.innerText = "True - This is a panlidrome"
+            } else {
+                display.innerText = "False - This is not a panlidrome"
+            }
+        }
+    </script>
+</body>
+</html>
